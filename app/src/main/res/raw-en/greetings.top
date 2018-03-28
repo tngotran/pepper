@@ -1,0 +1,8 @@
+topic: ~greetings()
+
+concept:(hello) [hello hi hey "good morning" greetings "how are you"]
+concept:(filler) [hmm]
+
+u: (hello) ~hello
+u: (discussEnded) ~filler^endDiscuss(discussEnded)
+#u: (*) ~filler

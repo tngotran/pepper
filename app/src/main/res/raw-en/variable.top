@@ -1,0 +1,16 @@
+topic: ~variable()
+
+#u:(nickname) ^first["My nickname is $var" "I have no nickname, type one"]
+
+#concept:(hello) [hello hi hey "good morning" greetings "how are you"]
+#concept:(filler) [hmm]
+
+#u: (hello) ~hello
+#u: (discussEnded) ~filler^endDiscuss(discussEnded)
+#u: (*) $var
+proposal: %say_response $var
+
+#u:(*) MuseResponse1 $var #$var_change = 0
+#u:($var_change == 0) MuseResponse2 $var $var_change = 1
+
+
